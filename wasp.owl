@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.streamreasoning.org/webstreams/wasp#"
+     xml:base="http://www.streamreasoning.org/webstreams/wasp"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.streamreasoning.org/webstreams/wasp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#about -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#about"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#contains"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#payload -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#payload"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#producer -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#producer"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#relatesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#relatesTo"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#sender -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#sender"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#target -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#target"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#timestamp -->
+
+    <owl:ObjectProperty rdf:about="http://www.streamreasoning.org/webstreams/wasp#timestamp"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Apply -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Apply">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Join -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Join">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+        <rdfs:comment>informs a target WASP that the mentioned one is joining a SWARM.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Leave -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Leave">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+        <rdfs:comment>informs a target WASP that the mentioned one is leaving a SWARM.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Messages -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Publish -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Publish">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+        <rdfs:comment>spreads a stream description among the reachable WASPs.–</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Qualify -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Qualify">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+        <rdfs:comment>sends a wasp&apos;s description to another WASP. It can be the same WASP sending the message or it can be another one. 
+Description might contains metadata bout the WASP:
+available streams to consume
+capabilities
+SWARM it is part of</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#Subscribe -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#Subscribe">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Messages"/>
+        <rdfs:comment>establishes a connection to a web stream.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.streamreasoning.org/webstreams/wasp#SubscribeR -->
+
+    <owl:Class rdf:about="http://www.streamreasoning.org/webstreams/wasp#SubscribeR">
+        <rdfs:subClassOf rdf:resource="http://www.streamreasoning.org/webstreams/wasp#Subscribe"/>
+        <rdfs:comment>Represent a response to a subscribe message that might be required for a two-factor subscription, e.g., private websocket</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
